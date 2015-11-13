@@ -1,1 +1,1 @@
-# Contest-Management-System
+基于SHH+tomcat开发的学科竞赛管理系统。用于负责学科竞赛的信息统计，包括获奖信息，参赛人员，获奖分类统计等。
