@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="cn.edu.xmut.MyContest.model.Fund" table="fund"
+		dynamic-update="true">
+		<id name="id" type="java.lang.Integer">
+			<column name="id" />
+			<generator class="native" />
+		</id>
+		
+        <property name="spend" type="java.lang.Double">
+            <column name="spend" scale="4" not-null="true" />
+        </property>   
+        		
+        <property name="total" type="java.lang.Double">
+            <column name="total" scale="4" not-null="true" />
+        </property>    
+        
+        <property name="eventId" type="java.lang.String">
+            <column name="eventId" length="6" />
+        </property>     
+        
+        <property name="note" type="java.lang.String">
+            <column name="note" length="64" />
+        </property>            
+	</class>
+</hibernate-mapping>
+

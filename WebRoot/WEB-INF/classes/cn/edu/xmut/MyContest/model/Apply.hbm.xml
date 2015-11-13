@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="cn.edu.xmut.MyContest.model.Apply" table="apply"
+		dynamic-update="true">
+		<id name="id" type="java.lang.Integer">
+			<column name="id" />
+			<generator class="native" />
+		</id>
+		<property name="applyname" type="java.lang.String">
+			<column name="applyname" length="32" />
+		</property>
+		<property name="detail" type="java.lang.String">
+			<column name="detail" length="32" />
+		</property>
+		<property name="plus" type="java.lang.String">
+			<column name="plus" length="32" />
+		</property>		
+	</class>
+</hibernate-mapping>
+

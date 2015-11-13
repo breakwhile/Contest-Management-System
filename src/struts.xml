@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>	
+<include file="struts-jfreechart.xml"/> 
+   <constant name="struts.i18n.encoding" value="UTF-8" />
+   <constant name="struts.multipart.parser" value="jakarta" />
+   <constant name="struts.multipart.maxSize" value="32212254720"/>
+    <package name="default" namespace="/" extends="struts-default">
+   
+		<action name="AdminAction" class="adminAction" >      
+			<result name="exit">login_admin.jsp</result> 
+	        <result name="update_teacher">teacher_list.jsp</result>
+	        <result name="add_teacher">teacher_list.jsp</result>
+	        <result name="delete_fund">fund_list.jsp</result>
+	        <result name="delete_teacher">teacher_list.jsp</result>
+	        <result name="ratifyOrRebut">apply_list.jsp</result>
+	    </action>	  
+	    
+		<action name="LoginAction" class="loginAction" >       
+	        <result name="login_admin">main_admin.jsp</result>  
+	        <result name="error_admin">error_admin.jsp</result>  
+	        <result name="login_teacher">main_teacher.jsp</result>  
+	        <result name="error_teacher">error_teacher.jsp</result>  	        
+	    </action>		     
+	    
+		<action name="JFreeChartAwardAction" class="jFreeChartAwardAction" >       
+	        <result name="success">result_contest.jsp</result>  	        
+	    </action>	    
+	    
+		<action name="JFreeChartScopeAction" class="jFreeChartScopeAction" >       
+	        <result name="success">result_contest.jsp</result>  	        
+	    </action>	 	    
+    
+		<action name="QueryAction" class="queryAction" > 
+		    <result name="applyFundList">applyFund_list.jsp</result>
+		    <result name="applyPowerList">applyPower_list.jsp</result>   
+		    <result name="fundList">fund_list.jsp</result>       
+	        <result name="teacherList">teacher_list.jsp</result>  
+	        <result name="query_event">update_event.jsp</result> 
+	        <result name="query_teacher">update_teacher.jsp</result>  
+	        <result name="contestantList">contestant_list.jsp</result>  
+	        <result name="contestInfoList">contest_info.jsp</result>  
+	        <result name="eventsList">events_list.jsp</result>  
+	    </action>		
+	    
+		<action name="TeacherAction" class="teacherAction" > 
+		    <result name="apply_fund">apply_fund.jsp</result>  
+		    <result name="apply_power">apply_power.jsp</result> 
+	        <result name="query_fund">fund.jsp</result>  
+	        <result name="delete_event">events_list.jsp</result>  
+			<result name="error">fund.jsp</result>  	        
+	        <result name="add_spend">fund.jsp</result>  
+	        <result name="add_cinfo">contest_info.jsp</result>
+	        <result name="update_event">events_list.jsp</result>
+	        <result name="exit">login_teacher.jsp</result>    
+	    </action>		    
+   </package>
+</struts>
